@@ -6,8 +6,7 @@ session_start();
 
 function check_auth($password)
 {
-	$password=hash('ripemd160',$password);
-	if($password!="c61ed694ca319e22ac621dd053cce83609d7accb")
+	if($password!="password")
 	{
 		return false;
 	}
