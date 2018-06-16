@@ -50,8 +50,8 @@ function printDirectoryContent($content, $depth, $path)
 		else
 		{
 			$folderName = array_shift($element);
-			echo '<input type="radio" name="'.$depth.'" id="'.$folderName.'">';
-			echo '<div><label class="element folder" for="'.$folderName.'">';
+			echo '<input type="radio" name="'.$depth.'" id="'.$folderName.$depth.'">';
+			echo '<div><label class="element folder" for="'.$folderName.$depth.'">';
 			echo   '<svg viewport="0 0 150 100" width="150px" height="100px">
 						<path d="M25 20 a5,5 0 0 1 5,-5 h40 a5,5 0 0 1 5,5 a5,5 0 0 0 5,5 h40 a5,5 0 0 1 5,5 v60 a5,5 0 0 1 -5,5 h-90 a5,5 0 0 1 -5,-5 Z" />
 						<rect x="25" y="25" rx="5" ry="5" width="100" height="70" />
