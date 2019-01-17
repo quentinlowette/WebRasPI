@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
 			}
 			else
 			{
-				Header("location: index.php");
+				Header("location: /WebRasPI/index.php");
 			}
 		}
 		else
@@ -33,7 +33,7 @@ else
 {
 	if(check_login(false))
 	{
-		Header("location: index.php");
+		Header("location: /WebRasPi/index.php");
 	}
 }
 ?>
@@ -45,8 +45,8 @@ else
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="Author" content="Quentin Lowette" />
 		
-		<link rel="stylesheet" href="style.css" type="text/css" />
-		<link rel="stylesheet" href="login.css" type="text/css" />
+		<link rel="stylesheet" href="/WebRasPI/style.css" type="text/css" />
+		<link rel="stylesheet" href="/WebRasPI/login.css" type="text/css" />
 
 		<title>Raspberry Pi</title>
 	</head>

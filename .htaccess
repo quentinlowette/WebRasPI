@@ -1,4 +1,4 @@
-DirectoryIndex WebRasPi/index.php
+DirectoryIndex /WebRasPI/index.php
 
 AddDefaultCharset "utf-8"
 

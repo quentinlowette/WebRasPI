@@ -26,11 +26,7 @@ include 'scripts/interface.php';
 	
 	<body>
 		<div class="header">
-				<h1>Raspberry Pi</h1>
-				<?php
-				$hostname = shell_exec('hostname');
-				echo '<h3>('.trim($hostname).')</h3>';
-				?>
+			<h1>Raspberry Pi</h1>
 			<form action="index.php" method="POST" class="logout">
 				<input type="submit" name="logout" value="Log Out">
 			</form>

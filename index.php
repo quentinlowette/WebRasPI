@@ -18,8 +18,8 @@ include 'scripts/interface.php';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="Author" content="Quentin Lowette" />
 		
-		<link rel="stylesheet" href="style.css" type="text/css" />
-		<link rel="stylesheet" href="system.css" type="text/css" />
+		<link rel="stylesheet" href="/WebRasPI/style.css" type="text/css" />
+		<link rel="stylesheet" href="/WebRasPI/system.css" type="text/css" />
 
 		<title>Raspberry Pi</title>
 	</head>
@@ -27,7 +27,7 @@ include 'scripts/interface.php';
 	<body>
 		<div class="header">
 			<h1>Raspberry Pi</h1>
-			<form action="index.php" method="POST" class="logout">
+			<form action="/WebRasPI/index.php" method="POST" class="logout">
 				<input type="submit" name="logout" value="Log Out">
 			</form>
 		</div>
