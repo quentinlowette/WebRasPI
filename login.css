@@ -1,0 +1,31 @@
+.loginForm
+{
+	display:flex;
+	flex-direction:column;
+	width:500px;
+	margin:0 auto;
+}
+
+.loginForm input
+{
+	margin:1rem;
+}
+
+.pwd
+{
+	text-align:center;
+}
+
+.error
+{
+	background-color:var(--c-error);
+	color:#fff;
+	padding:0.5rem;
+	font-weight:bold;
+}
+
+h1
+{
+	margin-bottom:1rem;
+	padding:1rem;
+}

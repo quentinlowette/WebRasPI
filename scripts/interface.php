@@ -69,7 +69,7 @@ function printRasp()
 
 function printFiles($dir)
 {
-	include 'features/files.php';
+	include 'scripts/files.php';
 	
 	$content = getDirContents($dir);
 	
@@ -78,22 +78,52 @@ function printFiles($dir)
 	echo '</div>';
 }
 
-function printPHPMA()
-{
-	echo '<a href="/phpmyadmin" class="button">Link to phpMyAdmin</a>';
-}
-
 function printSystem()
 {
-	include 'features/systemVariables.php';
-	include 'features/graphs.php';
+	include 'scripts/systemVariables.php';
+	include 'scripts/graphs.php';
 	
 	echo '<div class="infos">
-			<div class="info system"><h3>System</h3><p>Distribution</p><p>'.$dist.'</p><p>Kernel Version</p><p>'.$kernel.'</p><p>System Time</p><p>'.$dateString.'</p></div>
-			<div class="info hardware"><h3>Hardware</h3><p>Uptime</p><p>'.$uptime.'</p><p>Temperature</p>'.gauge($temp, 85).'</div>
-			<div class="info net"><h3>Network</h3><p>Name</p><p>'.$netName.'</p><p>IP Address</p><p>'.$ip.'</p><p>Link quality</p>'.gauge($netQuality[0],$netQuality[1], true).'</div>
-			<div class="info load"><h3>CPU Load Average</h3><p>1 min</p><p>'.$loadavg[0]*100 .'%</p><p>5 min</p><p>'.$loadavg[1]*100 .'%</p><p>15 min</p><p>'.$loadavg[2]*100 .'%</p></div>
-			<div class="info storage"><h3>Storage</h3>'.pieChart(substr($storage[0], 0, -1), substr($storage[1], 0, -1), substr($storage[2], 0, -1)).'</div>
-			<div class="info server"><h3>Server</h3><p>Apache Version</p><p>'.$versions[0].'</p><p>PHP Version</p><p>'.$versions[1].'</p><p>MySQL Version</p><p>'.$versions[2].'</p></div>
+			<div class="info system">
+				<h3>System</h3>
+				<div>
+					<p>Hostname</p><p>'.$hostname.'</p>
+					<p>Distribution</p><p>'.$dist.'</p>
+					<p>Kernel Version</p><p>'.$kernel.'</p>
+					<p>Uptime</p><p>'.$uptime.'</p>
+					<p>Last Boot</p><p>'.$lastboot.'</p>
+					<p>System Time</p><p>'.$dateString.'</p>
+				</div>
+			</div>
+			<div class="info net">
+				<h3>Network</h3>
+				<div>
+					<p>Name</p><p>'.$netName.'</p>
+					<p>IP Address</p><p>'.$ip.'</p>
+					<p>Link quality</p>'.gauge($netQuality[0],$netQuality[1], true).'
+				</div>
+			</div>
+			<div class="info load">
+				<h3>CPU Load Average</h3>
+				<div>
+					<p>1 min</p><p>'.$loadavg[0]*100 .'%</p>
+					<p>5 min</p><p>'.$loadavg[1]*100 .'%</p>
+					<p>15 min</p><p>'.$loadavg[2]*100 .'%</p>
+				</div>
+			</div>
+			<div class="info server">
+				<h3>Server</h3>
+				<div>
+					<p>Apache Version</p><p>'.$versions[0].'</p>
+					<p>PHP Version</p><p>'.$versions[1].'</p>
+					<p>MySQL Version</p><p>'.$versions[2].'</p>
+				</div>
+			</div>
+			<div class="info storage">
+				<h3>Storage</h3>
+				<div>
+					'.pieChart(substr($storage[0], 0, -1), substr($storage[1], 0, -1), substr($storage[2], 0, -1)).'
+				</div>
+			</div>	
 		  </div>';
 }

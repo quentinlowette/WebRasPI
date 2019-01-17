@@ -19,14 +19,18 @@ include 'scripts/interface.php';
 		<meta name="Author" content="Quentin Lowette" />
 		
 		<link rel="stylesheet" href="style.css" type="text/css" />
-		<link rel="stylesheet" href="system.css" type="text/css" />
+		<link rel="stylesheet" href="files.css" type="text/css" />
 
-		<title>Raspberry Pi</title>
+		<title>Files | Raspberry Pi</title>
 	</head>
 	
 	<body>
 		<div class="header">
-			<h1>Raspberry Pi</h1>
+				<h1>Raspberry Pi</h1>
+				<?php
+				$hostname = shell_exec('hostname');
+				echo '<h3>('.trim($hostname).')</h3>';
+				?>
 			<form action="index.php" method="POST" class="logout">
 				<input type="submit" name="logout" value="Log Out">
 			</form>
@@ -38,7 +42,7 @@ include 'scripts/interface.php';
 			?>
 			<div class="wrapper">
 				<?php
-					printSystem();
+					printFiles('/var/www/html');
 				?>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 <?php
-include 'session.php';
+include 'scripts/session.php';
 
 $message=0;
 if(isset($_POST['submit']))
@@ -46,6 +46,7 @@ else
 		<meta name="Author" content="Quentin Lowette" />
 		
 		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" href="login.css" type="text/css" />
 
 		<title>Raspberry Pi</title>
 	</head>

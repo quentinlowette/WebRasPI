@@ -1,0 +1,113 @@
+svg *
+{
+	stroke-width: 2;
+	stroke:var(--c-primary-dark);
+	fill:var(--c-primary-light);
+}
+
+.directoryContent
+{
+	display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+	position:relative;
+	padding:50px;
+}
+
+.element
+{
+	display:block;
+	border-radius:5px;
+	width:150px;
+	height:150px;
+	line-height:250px;
+	font-weight:bold;
+	border:2px solid transparent;
+	box-sizing:border-box;
+	position:relative;
+	overflow:hidden;
+	transition:all .3s;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.element:hover, .element:focus, .element:active,
+.directoryContent > input[type="radio"]:checked + div > .element
+{
+	border-color:var(--c-accent);
+	color:var(--c-accent);
+}
+
+.element svg
+{
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.element:hover svg *, .element:focus svg *, .element:active svg *,
+.directoryContent > input[type="radio"]:checked + div > .element svg *
+{
+	stroke:var(--c-accent);
+}
+
+.file svg line:nth-child(3)
+{
+	stroke-dasharray: 40;
+	stroke-dashoffset: 20;
+	transition: stroke-dashoffset .3s ease-out;
+}
+
+.file svg line:nth-child(4)
+{
+	stroke-dasharray: 40;
+	stroke-dashoffset: 30;
+	transition: stroke-dashoffset .3s ease-out;
+}
+
+.file:hover svg line, .file:focus svg line, .file:active svg line
+{
+	stroke-dashoffset: 0;
+}
+
+.folder svg rect
+{
+	transition: transform .3s ease-out;
+}
+
+.folderContent
+{
+	display:none;
+}
+
+.directoryContent input[type="radio"]:checked + div > .folderContent
+{
+	position:absolute;
+	z-index:1;
+	left:0;
+	top:100%;
+	width:100%;
+	display:grid;
+	border-top:1px solid var(--c-primary-dark);
+	background-color:#fff;
+	box-sizing:border-box;
+}
+
+.folder:hover svg rect, .folder:focus svg rect, .folder:active svg rect,
+.directoryContent > input[type="radio"]:checked + div > .folder svg rect
+{
+	transform:skewX(-15deg) scaleY(.9) translate(25px,10px);
+}
+
+.close
+{
+	width:20px;
+	height:20px;
+	position:absolute;
+	z-index:1;
+	top:10px;
+	left:10px;
+}
+.close:hover svg line, .close:focus svg line, .close:active svg line
+{
+	stroke:var(--c-accent);
+}

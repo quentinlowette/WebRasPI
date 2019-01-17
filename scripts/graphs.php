@@ -11,7 +11,8 @@ function gauge($level, $max, $arc=false)
 	if($arc)
 	{
 		$prop=($level/$max-0.5)/2;
-		return '<div class="gauge gauge-arc"><div class="mask" style="transform:rotate('.$prop.'turn);"></div><p>'.$level.'/'.$max.'</p></div>';
+		$percent=round($level/$max*100, 0);
+		return '<div class="gauge gauge-arc"><div class="mask" style="transform:rotate('.$prop.'turn);"></div><p>'.$percent.'</p></div>';
 	}
 	else
 	{
