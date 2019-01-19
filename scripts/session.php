@@ -39,7 +39,7 @@ function check_login($redirect=true)
 function login()
 {
 	$_SESSION['initURL'] = $_SERVER['REQUEST_URI'];
-	Header("location: login.php");
+	Header("location: /WebRasPI/login.php");
 	exit();
 }
 
@@ -47,6 +47,6 @@ function logout()
 {
 	unset($_SESSION['login'],$_SESSION['password'],$_SESSION['timeout']);
 	session_destroy();
-	Header("location: login.php");
+	Header("location: /WebRasPI/login.php");
     exit();
 }
