@@ -1,11 +1,9 @@
 .infos
 {
 	display:grid;
-	grid-template-columns: repeat(auto-fill,minmax(25rem, 1fr));
-	/* justify-content:center; */
+	grid-template-columns: repeat(auto-fit,minmax(18rem, 1fr));
 	grid-gap:1rem;
-	/* justify-items:center; */
-	padding:3rem;
+	padding:3%;
 	
 	--red:#e84118;
 	--yellow:#fbc531;
@@ -18,7 +16,6 @@
 	border-radius:5px;
 	padding-bottom:2rem;
 	padding-top:0;
-	box-sizing:border-box;
 }
 
 .info h3
@@ -32,9 +29,9 @@
 .info>div
 {
 	display:grid;
-	grid-template-columns:auto 1fr;
+	grid-template-columns:auto auto;
 	align-items:center;
-	padding:1rem 3rem 0 3rem;
+	padding:1rem;
 }
 
 .info>div>p

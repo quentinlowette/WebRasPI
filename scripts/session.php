@@ -50,3 +50,8 @@ function logout()
 	Header("location: /WebRasPI/login.php");
     exit();
 }
+
+if(isset($_GET['logout']))
+{
+	logout();
+}

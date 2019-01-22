@@ -3,16 +3,11 @@ include 'scripts/session.php';
 
 check_login(true);
 
-if(isset($_POST['logout']))
-{
-	logout();
-}
-
 include 'scripts/interface.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="fr" class="indexHTML">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,9 +22,6 @@ include 'scripts/interface.php';
 	<body>
 		<div class="header">
 			<h1>Raspberry Pi</h1>
-			<form action="/WebRasPI/index.php" method="POST" class="logout">
-				<input type="submit" name="logout" value="Log Out">
-			</form>
 		</div>
 
 		<div class="content">

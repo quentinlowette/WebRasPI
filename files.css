@@ -8,9 +8,10 @@ svg *
 .directoryContent
 {
 	display: grid;
-    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-columns: repeat(auto-fit, 150px);
 	position:relative;
-	padding:50px;
+	justify-content:center;
+	padding:3%;
 }
 
 .element
