@@ -14,7 +14,7 @@
 {
 	border:2px solid;
 	border-radius:5px;
-	padding-bottom:2rem;
+	/* padding-bottom:1rem; */
 	padding-top:0;
 }
 
@@ -30,13 +30,13 @@
 {
 	display:grid;
 	grid-template-columns:auto auto;
-	align-items:center;
-	padding:1rem;
+	/* align-items:center; */
+	margin:0.5rem 1rem 2rem 1rem;
 }
 
 .info>div>p
 {
-	margin:0.5rem 0;
+	padding:0.5rem 1.5rem;
 	text-align:left;
 }
 
@@ -45,10 +45,25 @@
 	text-align:right;
 }
 
-.system
+.info.list>div
 {
-	/* grid-row:1 /span 2; */
+	margin:0.5rem 0 2rem 0;
 }
+
+.info.list>div>p
+{
+	border-bottom:1px solid var(--c-primary-light2);
+}
+
+.info.list>div>p:nth-child(4n-1), .info.list>div>p:nth-child(4n)
+{
+	background-color:var(--c-primary-light3);
+}
+
+/* .load>div */
+/* { */
+	/* margin:1rem; */
+/* } */
 
 .load p
 {
@@ -57,17 +72,23 @@
 
 .load>div>p:nth-child(n+3)
 {
-	border-bottom-color:var(--yellow);
+	border-bottom:3px solid var(--yellow);
 }
 
 .load>div>p:nth-child(n+5)
 {
-	border-bottom-color:var(--red);
+	border-bottom:3px solid var(--red);
+}
+
+.net>div>p:nth-child(n+5)
+{
+	grid-column:1 /span 2;
 }
 
 .net .gauge
 {
 	margin-top:1rem;
+	grid-column:1 /span 2;
 }
 
 .gauge
@@ -76,7 +97,6 @@
 	width:150px;
 	background-color:var(--c-primary-light);
 	margin:auto;
-	grid-column:1 /span 2;
 	border:2px solid;
 }
 
@@ -169,8 +189,8 @@
 
 .pie
 {
-	width: 150px;
-	height: 150px;
+	width: 120px;
+	height: 120px;
 	border:2px solid;
 	border-radius: 50%;
 	background: var(--green);
@@ -182,8 +202,8 @@
 .rotate
 {
 	display:block;
-	width:75px;
-	height:150px;
+	width:60px;
+	height:120px;
 	border-radius:0 100% 100% 0/ 50%;
 	background-color:inherit;
 	transform-origin:left;

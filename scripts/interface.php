@@ -84,7 +84,7 @@ function printSystem()
 	include 'scripts/graphs.php';
 	
 	echo '<div class="infos">
-			<div class="info system">
+			<div class="info list system">
 				<h3>System</h3>
 				<div>
 					<p>Hostname</p><p>'.$hostname.'</p>
@@ -95,7 +95,7 @@ function printSystem()
 					<p>System Time</p><p>'.$dateString.'</p>
 				</div>
 			</div>
-			<div class="info net">
+			<div class="info list net">
 				<h3>Network</h3>
 				<div>
 					<p>Name</p><p>'.$netName.'</p>
@@ -111,7 +111,7 @@ function printSystem()
 					<p>15 min</p><p>'.$loadavg[2]*100 .'%</p>
 				</div>
 			</div>
-			<div class="info server">
+			<div class="info list server">
 				<h3>Server</h3>
 				<div>
 					<p>Apache Version</p><p>'.$versions[0].'</p>
