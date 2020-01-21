@@ -6,10 +6,10 @@
 // Uptime of the system. Since how many days it is boot up.
 date_default_timezone_set('UTC');
 $rawUptime = shell_exec('uptime -s');
-$now = time();
+$now = time() + 60*60;
 $uptimestamp = strtotime($rawUptime);
-$timeDiff = $now-$uptimestamp-86400;
-$uptime = date("j\d G\h i\m s\s", $timeDiff);
+$timeDiff = $now-$uptimestamp;
+$uptime = intdiv($timeDiff, 86400) . "d " . date("G\h i\m s\s", $timeDiff);
 $lastboot = date("Y-m-d G:i:s", $uptimestamp);
 
 // Load average on the system for the past 1, 5 and 15 minutes.
